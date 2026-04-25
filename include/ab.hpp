@@ -1,4 +1,15 @@
+#pragma once
+
+#include <iostream>
+#include <queue>
+
 #include "nodob.hpp"
+
+template <typename Key>
+struct InfoNodo {
+  NodoB<Key> *ptr;
+  unsigned nivel;
+};
 
 template <typename Key>
 class AB {
@@ -7,56 +18,56 @@ class AB {
 
   public:
     AB() : raiz_(nullptr) {}
-    AB(const Key k) : raiz_(k) {}
-
-    bool insertar(const Key& k) {
-      return insertar_rama(raiz_, k);
+    AB(const Key k) {
+      raiz_ = new NodoB<Key>(k);
     }
 
-    bool buscar(const Key& k) const {
-      return buscar_rama(raiz_, k);
+    virtual bool insertar(const Key& k) = 0;
+
+    virtual bool buscar(const Key& k) const = 0;
+
+    void inorden() const {
+      inorden(raiz_);
     }
 
-    void inorden(NodoB<Key>* nodo=raiz_) const {
+    void MostrarArbol(std::ostream& os) const { // Por niveles
+      if (raiz_ == nullptr) {
+        os << "No se puede visualizar el árbol." << std::endl;
+        return; 
+      }
+      std::queue<InfoNodo<Key>> q;
+      q.push({raiz_, 0});
+      unsigned nivel_actual = 0;
+      while (!q.empty()) {
+        InfoNodo<Key> nodo = q.front();
+        q.pop();
+
+        if (nodo.nivel > nivel_actual || nodo.nivel == 0) {
+          os << "\nNivel " << nodo.nivel << ": ";
+          nivel_actual = nodo.nivel;
+        }
+
+        if (nodo.ptr == NULL) {
+          os << "[.] ";
+        } else  {
+          os << "[" << nodo.ptr->dato_ << "] ";
+          q.push({nodo.ptr->izdo_, nivel_actual + 1});
+          q.push({nodo.ptr->dcho_, nivel_actual + 1});
+        }
+      }
+    }
+
+  private: 
+    void inorden(NodoB<Key>* nodo) const {
       if (nodo == NULL) return;
       inorden(nodo->izdo_);
-      std::cout << nodo->getDato() << " ";
+      std::cout << nodo->dato_ << " ";
       inorden(nodo->dcho_);
-    }
-
-    void MostrarArbol(std::ostream& os) {
-      
-    }
-
-  private:
-    bool insertar_rama(NodoB* &nodo, const Key& key) {
-      if (nodo == NULL) { // Si el nodo está vacío
-        nodo = new NodoB(k);
-        return true;
-      } else if (k == nodo->getDato()) { // Si coincide
-        return false;
-      } 
-      else if (k < nodo->dato_) {
-        return insertar_rama(nodo->izdo_, k);
-      } else {
-        return insertar_rama(nodo->dcho_, k);
-      }
-    }
-
-    bool buscar_rama(NodoB* &nodo, const Key& key) {
-      if (nodo == NULL) { // Si no coincide
-        return false;
-      } else if (k == nodo->getDato()) { // Si coincide
-        return true;
-      } else if (k < nodo->getDato()) {
-        return buscar_rama(nodo->izdo_, k);
-      } else {
-        return buscar_rama(nodo->dcho_, k);
-      }
     }
 };
 
-std::ostream& operator<<(std::ostream& os, const AB& arbol) {
+template <typename Key>
+std::ostream& operator<<(std::ostream& os, const AB<Key>& arbol) {
   arbol.MostrarArbol(os);
   return os;
 }

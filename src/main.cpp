@@ -16,7 +16,7 @@ struct Datos {
 
 Datos LeerComandos(const std::vector<std::string>& vec) {
   Datos datos;
-  for (int i = 1; i < vec.size(); i++) {
+  for (size_t i = 1; i < vec.size(); i++) {
 		if (vec[i] == "-ab") { 
 			++i;
 			datos.arbol = vec[i];
@@ -40,9 +40,12 @@ void MostrarMenu() {
   std::cout << "\n[0] Salir\n";
   std::cout << "[1] Insertar clave\n";
   std::cout << "[2] Buscar clave\n";
-  std::cout << "[3] Mostrar árbol inorden\n" << std::endl;
+  std::cout << "[3] Mostrar árbol inorden\n";
+  std::cout << "[4] Mostrar recorrido por niveles\n" << std::endl;
 }
 
+
+// ./arbol -ab abb -init file 3 ../data/data.txt
 int main(int argc, char *argv[]) {
   if (argc < 5 || argc > 7) {
     std::cerr << "Error en el n de argumentos" << std::endl;
@@ -57,11 +60,12 @@ int main(int argc, char *argv[]) {
   // Tipo de árbol
   AB<Key> *arbol = nullptr;
   if (datos.arbol == "abe") {
-    arbol = new ABE<Key>();
+    arbol = new ABE<nif>();
   } else if (datos.arbol == "abb") {
-    arbol = new ABB<Key>();
+    arbol = new ABB<nif>();
   }
 
+  // Opciones línea de comandos
   if (datos.tipo == "manual") {
     std::cout << "\nSe genera un árbol vácio.\n";
   } else if (datos.tipo == "random") {
@@ -70,6 +74,7 @@ int main(int argc, char *argv[]) {
       arbol->insertar(clave);
     }
   } else if (datos.tipo == "file") {
+    std::cout << datos.file << std::endl;
     std::ifstream file(datos.file); 
     for (unsigned i = 0; i < datos.elementos; i++) {
       file >> clave;
@@ -108,7 +113,12 @@ int main(int argc, char *argv[]) {
         break;
 
       case 3: 
-        std::cout << arbol;
+        arbol->inorden();
+        std::cout << std::endl;
+        break;
+
+      case 4: 
+        std::cout << *arbol << std::endl;
         break;
 
       default: 

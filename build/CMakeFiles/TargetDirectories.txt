@@ -1,0 +1,3 @@
+/home/usuario/Ayeda/p6_arboles/build/CMakeFiles/arbol.dir
+/home/usuario/Ayeda/p6_arboles/build/CMakeFiles/edit_cache.dir
+/home/usuario/Ayeda/p6_arboles/build/CMakeFiles/rebuild_cache.dir
