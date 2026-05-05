@@ -7,5 +7,6 @@ class NodoB {
     NodoB<Key> *izdo_;
     NodoB<Key> *dcho_;
 
-    NodoB(const Key k) : dato_(k), izdo_(nullptr), dcho_(nullptr) {}
+    NodoB(const Key k, NodoB<Key> *izq = nullptr, NodoB<Key> *der = nullptr) : 
+          dato_(k), izdo_(izq), dcho_(der) {}
 };

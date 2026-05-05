@@ -5,7 +5,9 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
   /home/usuario/Ayeda/p6_arboles/include/ab.hpp \
   /home/usuario/Ayeda/p6_arboles/include/abb.hpp \
   /home/usuario/Ayeda/p6_arboles/include/abe.hpp \
+  /home/usuario/Ayeda/p6_arboles/include/avl.hpp \
   /home/usuario/Ayeda/p6_arboles/include/nif.hpp \
+  /home/usuario/Ayeda/p6_arboles/include/nodoavl.hpp \
   /home/usuario/Ayeda/p6_arboles/include/nodob.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -306,25 +308,13 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h:
 
-/usr/include/c++/14/iostream:
-
-/usr/include/c++/14/bits/requires_hosted.h:
-
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
-/usr/include/c++/14/iosfwd:
-
-/usr/include/c++/14/bits/locale_conv.h:
+/usr/include/x86_64-linux-gnu/c++/14/bits/c++io.h:
 
 /usr/include/c++/14/ios:
 
 /usr/include/c++/14/bits/streambuf.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/c++/14/format:
-
-/usr/include/c++/14/ext/alloc_traits.h:
 
 /usr/include/c++/14/debug/assertions.h:
 
@@ -386,6 +376,12 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 
 /usr/include/c++/14/pstl/pstl_config.h:
 
+/usr/include/c++/14/bits/requires_hosted.h:
+
+/usr/include/c++/14/iostream:
+
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
 /usr/include/c++/14/bits/refwrap.h:
 
 /usr/include/c++/14/bits/streambuf_iterator.h:
@@ -406,7 +402,11 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 
 /usr/include/c++/14/bits/random.h:
 
-/usr/include/c++/14/bits/enable_special_members.h:
+/usr/include/x86_64-linux-gnu/c++/14/bits/opt_random.h:
+
+/usr/include/c++/14/bits/stl_construct.h:
+
+/usr/include/c++/14/bits/predefined_ops.h:
 
 /usr/include/c++/14/bits/cxxabi_init_exception.h:
 
@@ -414,13 +414,15 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 
 /usr/include/c++/14/tr1/poly_laguerre.tcc:
 
+/usr/include/c++/14/bits/enable_special_members.h:
+
 /usr/include/c++/14/ext/atomicity.h:
 
-/usr/include/c++/14/bits/cpp_type_traits.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/c++/14/bits/locale_conv.h:
+
+/usr/include/c++/14/iosfwd:
 
 /usr/include/c++/14/bits/memory_resource.h:
 
@@ -438,67 +440,11 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 
 /usr/include/c++/14/bits/allocator.h:
 
-/usr/include/c++/14/concepts:
+/usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h:
 
-/usr/include/c++/14/bits/exception.h:
-
-/usr/include/c++/14/cctype:
+/usr/include/c++/14/cerrno:
 
 /home/usuario/Ayeda/p6_arboles/include/abe.hpp:
-
-/usr/include/c++/14/bits/basic_ios.h:
-
-/usr/include/c++/14/bits/alloc_traits.h:
-
-/usr/include/c++/14/bits/basic_ios.tcc:
-
-/usr/include/c++/14/bits/charconv.h:
-
-/usr/include/c++/14/cwchar:
-
-/home/usuario/Ayeda/p6_arboles/include/ab.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
-/home/usuario/Ayeda/p6_arboles/include/abb.hpp:
-
-/usr/include/c++/14/array:
-
-/usr/include/c++/14/fstream:
-
-/usr/include/c++/14/bits/specfun.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/include/c++/14/bits/hash_bytes.h:
-
-/usr/include/c++/14/bits/char_traits.h:
-
-/usr/include/c++/14/bits/ios_base.h:
-
-/usr/include/c++/14/bits/stl_deque.h:
-
-/usr/include/c++/14/deque:
-
-/usr/include/c++/14/bits/stl_algo.h:
-
-/usr/include/c++/14/cmath:
-
-/usr/include/c++/14/bits/locale_classes.h:
-
-/usr/include/c++/14/bits/stl_bvector.h:
-
-/usr/include/c++/14/bits/new_allocator.h:
-
-/home/usuario/Ayeda/p6_arboles/include/nif.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/alloca.h:
-
-/usr/include/c++/14/ext/type_traits.h:
-
-/usr/include/c++/14/bits/stringfwd.h:
 
 /usr/include/c++/14/bit:
 
@@ -520,19 +466,39 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 
 /usr/include/c++/14/numeric:
 
-/usr/include/c++/14/bits/predefined_ops.h:
+/usr/include/c++/14/bits/basic_ios.h:
 
-/usr/include/c++/14/backward/binders.h:
+/usr/include/c++/14/bits/alloc_traits.h:
 
-/usr/include/c++/14/tr1/legendre_function.tcc:
+/usr/include/c++/14/bits/basic_ios.tcc:
 
-/usr/include/x86_64-linux-gnu/bits/locale.h:
+/usr/include/c++/14/bits/charconv.h:
 
-/usr/include/c++/14/cwctype:
+/usr/include/c++/14/cwchar:
 
-/usr/include/c++/14/bits/functexcept.h:
+/home/usuario/Ayeda/p6_arboles/include/ab.hpp:
 
-/usr/include/pthread.h:
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
+
+/home/usuario/Ayeda/p6_arboles/include/abb.hpp:
+
+/usr/include/c++/14/format:
+
+/usr/include/c++/14/ext/alloc_traits.h:
+
+/usr/include/c++/14/bits/locale_classes.h:
+
+/usr/include/c++/14/bits/stl_algo.h:
+
+/usr/include/c++/14/cmath:
+
+/usr/include/c++/14/bits/stl_bvector.h:
+
+/usr/include/c++/14/bits/new_allocator.h:
+
+/usr/include/c++/14/bits/cpp_type_traits.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/c++/14/bits/fstream.tcc:
 
@@ -544,9 +510,57 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 
 /usr/include/c++/14/new:
 
+/usr/include/c++/14/array:
+
+/usr/include/c++/14/fstream:
+
+/usr/include/c++/14/bits/specfun.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitflags.h:
+
+/usr/include/c++/14/bits/hash_bytes.h:
+
+/usr/include/c++/14/bits/char_traits.h:
+
+/usr/include/c++/14/bits/ios_base.h:
+
+/usr/include/c++/14/bits/stl_deque.h:
+
+/usr/include/c++/14/deque:
+
+/home/usuario/Ayeda/p6_arboles/include/nif.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/14/ext/type_traits.h:
+
+/usr/include/c++/14/bits/stringfwd.h:
+
+/usr/include/c++/14/cctype:
+
+/usr/include/c++/14/bits/exception.h:
+
+/usr/include/c++/14/backward/binders.h:
+
+/usr/include/c++/14/concepts:
+
+/usr/include/c++/14/tr1/legendre_function.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+
+/usr/include/c++/14/cwctype:
+
+/usr/include/c++/14/bits/functexcept.h:
+
+/usr/include/pthread.h:
+
 /usr/include/c++/14/bits/invoke.h:
 
 /usr/include/c++/14/cstdio:
+
+/home/usuario/Ayeda/p6_arboles/include/avl.hpp:
 
 /usr/include/c++/14/bits/utility.h:
 
@@ -587,10 +601,6 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 /usr/include/c++/14/bits/locale_facets_nonio.h:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h:
-
-/usr/include/x86_64-linux-gnu/c++/14/bits/opt_random.h:
-
-/usr/include/c++/14/bits/stl_construct.h:
 
 /usr/include/c++/14/bits/ptr_traits.h:
 
@@ -774,6 +784,8 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
+/home/usuario/Ayeda/p6_arboles/include/nodoavl.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h:
@@ -827,9 +839,3 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/basic_file.h:
-
-/usr/include/c++/14/cerrno:
-
-/usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h:
-
-/usr/include/x86_64-linux-gnu/c++/14/bits/c++io.h:

@@ -218,4 +218,6 @@ CMakeFiles/arbol.dir/src/main.cpp.o: \
  /usr/include/c++/14/bits/random.tcc /usr/include/c++/14/numeric \
  /usr/include/c++/14/bits/stl_numeric.h \
  /usr/include/c++/14/pstl/glue_numeric_defs.h \
- /usr/include/c++/14/pstl/execution_defs.h
+ /usr/include/c++/14/pstl/execution_defs.h \
+ /home/usuario/Ayeda/p6_arboles/include/avl.hpp \
+ /home/usuario/Ayeda/p6_arboles/include/nodoavl.hpp

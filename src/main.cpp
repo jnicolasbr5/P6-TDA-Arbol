@@ -7,11 +7,14 @@
 #include "abb.hpp"
 #include "nif.hpp"
 
+#include "avl.hpp"
+
 struct Datos {
   std::string arbol;
   std::string tipo;
   unsigned elementos = 0;
   std::string file = "";
+  bool trace = false;
 };
 
 Datos LeerComandos(const std::vector<std::string>& vec) {
@@ -31,7 +34,11 @@ Datos LeerComandos(const std::vector<std::string>& vec) {
           datos.file = vec[i];
         }
       }
-		}	
+		} else if (vec[i] == "-trace") {
+      ++i;
+      if (vec[i] == "y") datos.trace = true;
+      else datos.trace = false; 
+    }	
 	}
 	return datos;
 }
@@ -47,7 +54,7 @@ void MostrarMenu() {
 
 // ./arbol -ab abb -init file 3 ../data/data.txt
 int main(int argc, char *argv[]) {
-  if (argc < 5 || argc > 7) {
+  if (argc < 5 || argc > 9) {
     std::cerr << "Error en el n de argumentos" << std::endl;
     return 1;
   }
@@ -63,6 +70,11 @@ int main(int argc, char *argv[]) {
     arbol = new ABE<nif>();
   } else if (datos.arbol == "abb") {
     arbol = new ABB<nif>();
+  } else if (datos.arbol == "avl") {
+    arbol = new AVL<nif>(datos.trace);
+  } else {
+    std::cerr << "Error al elegir tipo de árbol." << std::endl;
+    return 1;
   }
 
   // Opciones línea de comandos

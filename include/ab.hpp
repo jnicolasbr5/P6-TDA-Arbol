@@ -30,7 +30,7 @@ class AB {
       inorden(raiz_);
     }
 
-    void MostrarArbol(std::ostream& os) const { // Por niveles
+    virtual void MostrarArbol(std::ostream& os) const { // Por niveles
       if (raiz_ == nullptr) {
         os << "No se puede visualizar el árbol." << std::endl;
         return; 

@@ -19,6 +19,8 @@ set(SOURCES
     include/abe.hpp
     include/nif.hpp
     include/nodob.hpp
+    include/nodoavl.hpp
+    include/avl.hpp
 )
 
 # Create executable
