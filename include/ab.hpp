@@ -13,7 +13,7 @@ struct InfoNodo {
 
 template <typename Key>
 class AB {
-  protected:
+  public:
     NodoB<Key> *raiz_;
 
   public:
@@ -55,6 +55,11 @@ class AB {
           q.push({nodo.ptr->dcho_, nivel_actual + 1});
         }
       }
+    }
+
+    const int TamRama(NodoB<Key>* nodo) {
+      if (nodo == NULL) return 0;
+        return (1 + TamRama(nodo->izdo_) + TamRama(nodo->dcho_));
     }
 
   private: 

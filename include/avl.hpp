@@ -16,67 +16,100 @@ class AVL: public ABB<Key> {
         return true;
 		}
 
+    // MODIFICACION
+    bool eliminar(const Key& k) {
+      bool decrece = false;    
+      eliminar_r(this->raiz_, k, decrece);
+      return decrece;
+    }
+
+
+
 		void MostrarArbol(std::ostream& os) const override {
-        if (this->raiz_ == NULL) {
-            os << "Árbol vacío" << std::endl;
-            os << "Nivel 0: [.]" << std::endl;
-            return;
+      if (this->raiz_ == NULL) {
+        os << "Árbol vacío" << std::endl;
+        os << "Nivel 0: [.]" << std::endl;
+        return;
+      }
+
+      std::queue<NodoB<Key>*> q;
+      q.push(this->raiz_);
+      int nivel = 0;
+
+      while (!q.empty()) {
+        int nodos_en_nivel = q.size();
+        bool proximo_nivel_tiene_datos = false;
+        
+        os << "Nivel " << nivel << ": ";
+
+        for (int i = 0; i < nodos_en_nivel; ++i) {
+          NodoB<Key>* actual = q.front();
+          q.pop();
+
+          if (actual != NULL) {
+              os << "[";
+              // TRAZA
+              if (this->trace_) {
+                  NodoAVL<Key>* nodo_avl = static_cast<NodoAVL<Key>*>(actual);
+                  os << nodo_avl->dato_ << "(" << nodo_avl->bal_ << ")";
+              } else {
+                  os << actual->dato_;
+              }
+              os << "] ";
+
+              q.push(actual->izdo_);
+              q.push(actual->dcho_);
+
+              if (actual->izdo_ != NULL || actual->dcho_ != NULL) {
+                  proximo_nivel_tiene_datos = true;
+              }
+          } else {
+              os << "[.] ";
+          }
         }
+        os << std::endl;
+        nivel++;
 
-        std::queue<NodoB<Key>*> q;
-        q.push(this->raiz_);
-        int nivel = 0;
-
-        while (!q.empty()) {
-            int nodos_en_nivel = q.size();
-            bool proximo_nivel_tiene_datos = false;
-            
-            os << "Nivel " << nivel << ": ";
-
-            for (int i = 0; i < nodos_en_nivel; ++i) {
-                NodoB<Key>* actual = q.front();
-                q.pop();
-
-                if (actual != NULL) {
-                    os << "[";
-                    // TRAZA
-                    if (this->trace_) {
-                        NodoAVL<Key>* nodo_avl = static_cast<NodoAVL<Key>*>(actual);
-                        os << nodo_avl->dato_ << "(" << nodo_avl->bal_ << ")";
-                    } else {
-                        os << actual->dato_;
-                    }
-                    os << "] ";
-
-                    q.push(actual->izdo_);
-                    q.push(actual->dcho_);
-
-                    if (actual->izdo_ != NULL || actual->dcho_ != NULL) {
-                        proximo_nivel_tiene_datos = true;
-                    }
-                } else {
-                    os << "[.] ";
-                    q.push(NULL); 
-                    q.push(NULL);
-                }
-            }
-            os << std::endl;
-            nivel++;
-
-            if (!proximo_nivel_tiene_datos) {
-                os << "Nivel " << nivel << ": ";
-                int puntos_finales = q.size();
-                for (int i = 0; i < puntos_finales; ++i) {
-                    os << "[.] ";
-                }
-                os << std::endl;
-                break; 
-            }
+        if (!proximo_nivel_tiene_datos) {
+          os << "Nivel " << nivel << ": ";
+          int puntos_finales = q.size();
+          for (int i = 0; i < puntos_finales; ++i) {
+              os << "[.] ";
+          }
+          os << std::endl;
+          break; 
         }
+      }
     }
 
 	private:
 		bool trace_;
+
+    void eliminar_r(NodoB<Key>* &nodo, int clave_dada, bool& decrece) {
+      if (nodo == NULL) return;
+
+      if (clave_dada < nodo->dato_) { // Menor que, subárbol izq
+        eliminar_r(nodo->izdo_,clave_dada,decrece);
+      } else if (clave_dada > nodo->dato_) { // Mayor que, subarbol der
+        eliminar_r(nodo->dcho_,clave_dada,decrece);
+      } else { // Igual
+          bool encontrado = true;
+          NodoB<Key>* nodo_eliminar = nodo;
+          if (nodo->izdo_ == nullptr) {
+              nodo = nodo->dcho_;
+          } else if (nodo->dcho_ == nullptr) {
+              nodo = nodo->izdo_;
+          } else {
+              NodoB<Key>* sucesor = nodo->dcho_;
+              while (sucesor->izdo_ != nullptr) sucesor = sucesor->izdo_;
+              nodo->dato_ = sucesor->dato_;
+              bool aux;
+              eliminar_r(nodo->dcho_, sucesor->dato_, aux);
+              return;
+          }
+          delete nodo_eliminar;  
+        }
+      }
 
 		void inserta_bal(NodoB<Key>* &nodo, NodoAVL<Key>* nuevo, bool &crece) {
       if (nodo == NULL) {

@@ -6,6 +6,7 @@
 #include "abe.hpp"
 #include "abb.hpp"
 #include "nif.hpp"
+#include "test.hpp"
 
 #include "avl.hpp"
 
@@ -48,7 +49,8 @@ void MostrarMenu() {
   std::cout << "[1] Insertar clave\n";
   std::cout << "[2] Buscar clave\n";
   std::cout << "[3] Mostrar árbol inorden\n";
-  std::cout << "[4] Mostrar recorrido por niveles\n" << std::endl;
+  std::cout << "[4] Mostrar recorrido por niveles\n";
+  std::cout << "[5] TEST\n" << std::endl;
 }
 
 
@@ -95,6 +97,7 @@ int main(int argc, char *argv[]) {
   }
 
   unsigned opcion;
+  Test<nif> test(datos.trace);
   while (true) {
     MostrarMenu();
     std::cout << "Opción: ";
@@ -132,6 +135,10 @@ int main(int argc, char *argv[]) {
       case 4: 
         std::cout << *arbol << std::endl;
         break;
+      
+      case 5:
+        test.testear();
+        break; 
 
       default: 
         std::cout << "Error de selección" << std::endl;

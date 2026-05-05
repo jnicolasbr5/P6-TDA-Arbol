@@ -9,6 +9,7 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
   /home/usuario/Ayeda/p6_arboles/include/nif.hpp \
   /home/usuario/Ayeda/p6_arboles/include/nodoavl.hpp \
   /home/usuario/Ayeda/p6_arboles/include/nodob.hpp \
+  /home/usuario/Ayeda/p6_arboles/include/test.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -310,11 +311,7 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/c++io.h:
 
-/usr/include/c++/14/ios:
-
-/usr/include/c++/14/bits/streambuf.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+/usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h:
 
 /usr/include/c++/14/debug/assertions.h:
 
@@ -408,6 +405,8 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 
 /usr/include/c++/14/bits/predefined_ops.h:
 
+/usr/include/c++/14/bits/stl_numeric.h:
+
 /usr/include/c++/14/bits/cxxabi_init_exception.h:
 
 /usr/include/c++/14/string_view:
@@ -440,6 +439,8 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 
 /usr/include/c++/14/bits/allocator.h:
 
+/usr/include/c++/14/backward/binders.h:
+
 /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h:
 
 /usr/include/c++/14/cerrno:
@@ -469,6 +470,12 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 /usr/include/c++/14/bits/basic_ios.h:
 
 /usr/include/c++/14/bits/alloc_traits.h:
+
+/usr/include/c++/14/bits/streambuf.tcc:
+
+/usr/include/c++/14/ios:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
 
 /usr/include/c++/14/bits/basic_ios.tcc:
 
@@ -502,14 +509,6 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 
 /usr/include/c++/14/bits/fstream.tcc:
 
-/usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h:
-
-/usr/include/c++/14/bits/vector.tcc:
-
-/usr/include/c++/14/bits/max_size_type.h:
-
-/usr/include/c++/14/new:
-
 /usr/include/c++/14/array:
 
 /usr/include/c++/14/fstream:
@@ -524,6 +523,16 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 
 /usr/include/c++/14/bits/ios_base.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h:
+
+/usr/include/c++/14/bits/vector.tcc:
+
+/usr/include/c++/14/bits/max_size_type.h:
+
+/usr/include/c++/14/new:
+
+/home/usuario/Ayeda/p6_arboles/include/test.hpp:
+
 /usr/include/c++/14/bits/stl_deque.h:
 
 /usr/include/c++/14/deque:
@@ -531,6 +540,10 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 /home/usuario/Ayeda/p6_arboles/include/nif.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/c++/14/bits/locale_facets_nonio.tcc:
+
+/usr/include/c++/14/bits/ptr_traits.h:
 
 /usr/include/alloca.h:
 
@@ -541,8 +554,6 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 /usr/include/c++/14/cctype:
 
 /usr/include/c++/14/bits/exception.h:
-
-/usr/include/c++/14/backward/binders.h:
 
 /usr/include/c++/14/concepts:
 
@@ -600,12 +611,6 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 
 /usr/include/c++/14/bits/locale_facets_nonio.h:
 
-/usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h:
-
-/usr/include/c++/14/bits/ptr_traits.h:
-
-/usr/include/c++/14/bits/locale_facets_nonio.tcc:
-
 /usr/include/c++/14/bits/uses_allocator.h:
 
 /usr/include/c++/14/bits/localefwd.h:
@@ -613,8 +618,6 @@ CMakeFiles/arbol.dir/src/main.cpp.o: /home/usuario/Ayeda/p6_arboles/src/main.cpp
 /usr/include/stdint.h:
 
 /usr/include/endian.h:
-
-/usr/include/c++/14/bits/stl_numeric.h:
 
 /usr/include/c++/14/bits/memoryfwd.h:
 

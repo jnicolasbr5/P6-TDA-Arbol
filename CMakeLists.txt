@@ -21,6 +21,7 @@ set(SOURCES
     include/nodob.hpp
     include/nodoavl.hpp
     include/avl.hpp
+    include/test.hpp
 )
 
 # Create executable
